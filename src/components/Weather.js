@@ -3,6 +3,8 @@ import React from "react";
 class Weather extends React.Component{
   render(){
     return(
+      //this refers to current instance
+      //it will print data for location,temperature,humidity,description
       <div>
         {
           this.props.city && this.props.country && <p>Location:

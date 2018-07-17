@@ -2,7 +2,7 @@ import React from "react";
 import Titles from "./components/Title";
 import Form from "./components/Form";
 import Weather from "./components/Weather";
-
+//API key used for openweathermap
 const API_KEY = "3d2195c8cb15db85d12ddcfe849c5600";
 class App extends React.Component{
   state = {
@@ -19,6 +19,7 @@ class App extends React.Component{
     const city = e.target.elements.city.value;
     const country = e.target.elements.country.value;
     if(city && country){
+      //for api call used fetch
       const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}&units=metric`);
       const data = await api_call.json();
       //console.log(data);
